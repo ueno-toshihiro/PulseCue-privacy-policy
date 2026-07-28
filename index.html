@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>パルスキュー プライバシーポリシー</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6e6e73;
+    --border: #e5e5ea;
+    --accent: #ff375f;
+    --card-bg: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --fg: #f5f5f7;
+      --muted: #98989d;
+      --border: #2c2c2e;
+      --accent: #ff6482;
+      --card-bg: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  header.page-header {
+    margin-bottom: 2rem;
+  }
+  .lang-switch {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .lang-switch:hover { color: var(--accent); border-color: var(--accent); }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.01em;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .lede {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.97rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2.4rem 0 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.3rem; }
+  li { margin-bottom: 0.6rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  .note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: -0.3rem;
+  }
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+  }
+  .contact-list li {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-list li:last-child { margin-bottom: 0; }
+  .contact-label {
+    color: var(--muted);
+    flex-shrink: 0;
+    min-width: 8.5em;
+  }
+  footer.page-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.75rem 1rem 3rem; }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.05rem; }
+    .contact-list li { flex-direction: column; gap: 0.15rem; }
+    .contact-label { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-header">
+    <a class="lang-switch" href="privacy_policy_en.html">English version</a>
+    <h1>パルスキュー プライバシーポリシー</h1>
+    <p class="updated">最終改定日: 2026年7月28日</p>
+  </header>
+
+  <p class="lede">
+    ピボットネット合同会社（以下「当方」といいます。）は、Apple Watch向けアプリケーション「パルスキュー」（以下「本アプリ」といいます。）における、ユーザーの情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+  </p>
+
+  <h2>1. 取得する情報および取得方法</h2>
+  <p>本アプリは、AppleのHealthKitフレームワークを通じて、以下のヘルスケアデータを取得・記録します。</p>
+  <ul>
+    <li><strong>心拍数データ（脈拍数）:</strong> リアルタイムの脈拍数を取得するために使用します。</li>
+    <li><strong>ワークアウトデータ:</strong> 計測セッションの開始・終了時刻等を、ワークアウト記録としてHealthKit（Apple Health）に保存します。</li>
+  </ul>
+  <p class="note">※ 本アプリは、ユーザーがHealthKitへのアクセスを明示的に許可した場合にのみ、これらのデータの取得・記録を行います。</p>
+
+  <h2>2. 情報の利用目的</h2>
+  <p>取得・記録した心拍数データおよびワークアウトデータは、以下の目的のためにのみ使用します。</p>
+  <ul>
+    <li>本アプリの画面上およびWatch文字盤（コンプリケーション）上への最新の脈拍数の表示</li>
+    <li>ユーザーが開始した計測セッション中におけるリアルタイムの脈拍データの更新</li>
+    <li>計測セッションをワークアウト記録としてHealthKit（Apple Health）に保存し、計測履歴として管理できるようにするため</li>
+  </ul>
+
+  <h2>3. ヘルスケア（HealthKit）データの保護と厳格な制限</h2>
+  <p>当方は、HealthKitから取得したデータについて、Apple Developer Programガイドラインに従い、以下の制限を厳守します。</p>
+  <ul>
+    <li><strong>データのローカル処理（外部非送信）:</strong> 取得したヘルスケアデータは、お使いのデバイス（Apple WatchおよびペアリングされたiPhone）内でのみ処理・一時保存されます。当方の外部サーバー等へ送信・蓄積されることは一切ありません。</li>
+    <li><strong>広告・マーケティング利用の禁止:</strong> 取得したヘルスケアデータを、広告配信、マーケティング、データマイニング、その他これらに類する目的で使用することは一切ありません。</li>
+    <li><strong>第三者提供・売却の禁止:</strong> 取得したヘルスケアデータを、第三者に開示、提供、共有、または売却することは一切ありません。</li>
+  </ul>
+
+  <h2>4. 第三者モジュール・追跡（トラッキング）について</h2>
+  <p>本アプリでは、外部のアクセス解析ツール（Google Analytics等）やサードパーティ製広告SDK等は使用しておりません。ユーザーの動作履歴やヘルスケアデータが第三者へ送信・トラッキングされることはありません。</p>
+
+  <h2>5. 免責事項（非医療機器に関する告示）</h2>
+  <p>本アプリは、一般的なフィットネスおよびウェルネス（健康維持）のサポートを目的としており、医療機器ではありません。本アプリが表示するデータは、病気の診断、治療、予防、その他の医療行為を目的としたものではありません。身体に不調を感じた場合や医療上の判断が必要な場合は、必ず医師または医療専門家にご相談ください。</p>
+
+  <h2>6. プライバシーポリシーの改定</h2>
+  <p>当方は、法令の変更やアプリ機能の改定に伴い、本ポリシーの内容を適宜見直し、変更することがあります。変更後のポリシーは、本Webページ上に掲載した時点から効力を生じるものとします。</p>
+
+  <h2>7. お問い合わせ窓口</h2>
+  <p>本ポリシーに関するご質問、ご意見、お問い合わせは、下記までご連絡ください。</p>
+  <ul class="contact-list">
+    <li><span class="contact-label">事業者名</span><span>ピボットネット合同会社</span></li>
+    <li><span class="contact-label">お問い合わせ先メールアドレス</span><span>ueno.hub@gmail.com</span></li>
+    <li><span class="contact-label">制定日</span><span>2026年7月28日</span></li>
+  </ul>
+
+  <footer class="page-footer">
+    &copy; 2026 Pivot-net LLC
+  </footer>
+</div>
+</body>
+</html>
