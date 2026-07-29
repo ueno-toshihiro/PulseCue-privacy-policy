@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PulseCue Support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6e6e73;
+    --border: #e5e5ea;
+    --accent: #ff375f;
+    --card-bg: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --fg: #f5f5f7;
+      --muted: #98989d;
+      --border: #2c2c2e;
+      --accent: #ff6482;
+      --card-bg: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  header.page-header {
+    margin-bottom: 2rem;
+  }
+  .lang-switch {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .lang-switch:hover { color: var(--accent); border-color: var(--accent); }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .lede {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.97rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2.4rem 0 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0 0 1rem; }
+  .faq-item {
+    margin-bottom: 1.6rem;
+  }
+  .faq-item:last-child { margin-bottom: 0; }
+  .faq-q {
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .faq-q .badge {
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+  .faq-a {
+    margin: 0;
+    color: var(--fg);
+    padding-left: 1.6rem;
+  }
+  .contact-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.3rem 1.3rem;
+    text-align: center;
+  }
+  .contact-card a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+  .contact-card a:hover { text-decoration: underline; }
+  footer.page-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.75rem 1rem 3rem; }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-header">
+    <a class="lang-switch" href="support.html">日本語版</a>
+    <h1>PulseCue Support</h1>
+  </header>
+
+  <p class="lede">
+    Here are answers to common questions about using PulseCue. If your question isn't answered below, feel free to reach out using the contact info at the bottom of this page.
+  </p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>The heart rate on my Watch face complication isn't updating. Is something broken?</p>
+    <p class="faq-a">Nothing is broken. When no measurement session is running, watchOS limits how often complications can refresh, so the displayed value may stay unchanged for several minutes (occasionally up to around 10). If you've set a target range, the complication still updates as soon as your heart rate enters that range. During an active session, it updates every few seconds to tens of seconds.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>My Apple Watch battery seems to drain faster during a measurement session.</p>
+    <p class="faq-a">This is expected behavior. PulseCue uses a workout session to capture your heart rate in real time, which uses more battery than normal standby. We recommend ending the session with "Stop Measuring" when you're not actively using it.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>Are there any in-app purchases or additional fees?</p>
+    <p class="faq-a">No. There are no in-app purchases of any kind.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>Is this app a medical device?</p>
+    <p class="faq-a">No, it is not a medical device. PulseCue is intended solely for fitness and wellness purposes and is not intended to diagnose, treat, or prevent any disease. Please consult a physician for any medical concerns.</p>
+  </div>
+
+  <h2>Contact Us</h2>
+  <p>If the above doesn't answer your question, or if you'd like to report a bug or share a feature request, please reach out at the email address below.</p>
+  <div class="contact-card">
+    <a href="mailto:ueno.hub@gmail.com">ueno.hub@gmail.com</a>
+  </div>
+
+  <footer class="page-footer">
+    &copy; 2026 Pivot-net LLC
+  </footer>
+</div>
+</body>
+</html>
