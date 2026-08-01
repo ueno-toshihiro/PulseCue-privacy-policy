@@ -95,6 +95,12 @@
     color: var(--fg);
     padding-left: 1.6rem;
   }
+  .faq-steps {
+    margin: 0.5rem 0 0;
+    padding-left: 3rem;
+  }
+  .faq-steps li { margin: 0 0 0.35rem; }
+  .faq-steps li:last-child { margin-bottom: 0; }
   .contact-card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -125,7 +131,7 @@
 <body>
 <div class="wrap">
   <header class="page-header">
-    <a class="lang-switch" href="../support">日本語版</a>
+    <a class="lang-switch" href="support.html">日本語版</a>
     <h1>PulseCue Support</h1>
   </header>
 
@@ -141,8 +147,33 @@
   </div>
 
   <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>Is there a way to refresh the complication right now?</p>
+    <p class="faq-a">Tap the complication to open the app, then return to the watch face. Opening the app loads your latest heart rate, and returning to the watch face pushes that value to the complication. This is the most reliable way to see an up-to-date reading without waiting for watchOS to refresh on its own.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>My PulseCue complication doesn't follow along while I'm working out in the built-in Workout app.</p>
+    <p class="faq-a">This is a watchOS limitation. Real-time heart rate is delivered only to the app that started the measurement, so PulseCue cannot receive readings from a session another app is running. To see real-time values in PulseCue, use PulseCue's own "Start Measuring" instead.</p>
+  </div>
+
+  <div class="faq-item">
     <p class="faq-q"><span class="badge">Q.</span>My Apple Watch battery seems to drain faster during a measurement session.</p>
     <p class="faq-a">This is expected behavior. PulseCue uses a workout session to capture your heart rate in real time, which uses more battery than normal standby. We recommend ending the session with "Stop Measuring" when you're not actively using it.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>Measuring fills up my Exercise ring (the green one).</p>
+    <p class="faq-a">This is expected behavior. To read your heart rate in real time, PulseCue uses the Apple Watch workout feature. watchOS treats the start of a workout as the start of exercise, so the time counts toward your Exercise ring even while you're sitting still. The app cannot prevent this, but you can pause your rings on your Apple Watch (watchOS 11 or later).</p>
+    <ul class="faq-steps">
+      <li><strong>Apple Watch</strong>: Activity app → tap the bar icon in the top-left → scroll to the bottom → "Pause Rings"</li>
+      <li><strong>iPhone</strong>: Fitness app → Activity rings at the top of the Summary tab → "Pause Rings"</li>
+    </ul>
+    <p class="faq-a" style="margin-top:0.6rem;">You can pause for today, this week, this month, or a custom period of 1–90 days. Your metrics are still recorded while paused, and your streak is preserved.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>Does Low Power Mode stop heart rate measurement?</p>
+    <p class="faq-a">No. According to Apple, Low Power Mode during workouts turns off the Always On Display along with background measurements and notifications, but an active measurement session keeps running. Your heart rate continues to be measured while the screen is off, and waking the screen shows you the latest reading.</p>
   </div>
 
   <div class="faq-item">
