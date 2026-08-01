@@ -95,6 +95,12 @@
     color: var(--fg);
     padding-left: 1.6rem;
   }
+  .faq-steps {
+    margin: 0.5rem 0 0;
+    padding-left: 3rem;
+  }
+  .faq-steps li { margin: 0 0 0.35rem; }
+  .faq-steps li:last-child { margin-bottom: 0; }
   .contact-card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -125,7 +131,7 @@
 <body>
 <div class="wrap">
   <header class="page-header">
-    <a class="lang-switch" href="./en/support">English version</a>
+    <a class="lang-switch" href="support_en.html">English version</a>
     <h1>パルスキュー サポート</h1>
   </header>
 
@@ -141,8 +147,33 @@
   </div>
 
   <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>コンプリケーションの数値を今すぐ更新したいのですが、方法はありますか?</p>
+    <p class="faq-a">コンプリケーションをタップしてアプリを一度開き、そのまま文字盤に戻ってください。アプリを開いたときに最新の心拍数が読み込まれ、文字盤に戻ったタイミングでコンプリケーションにも反映されます。watchOSの更新待ちを待たずに最新の数値を表示したいときに、最も確実な方法です。</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>標準の「フィットネス」アプリで運動中、パルスキューのコンプリケーションが連動しません。</p>
+    <p class="faq-a">watchOSの制約によるものです。リアルタイムの心拍数は、その計測を開始したアプリだけが受け取れる仕組みになっており、ほかのアプリが実行中の計測の値をパルスキューが直接受け取ることはできません。パルスキューでリアルタイムに表示したい場合は、パルスキューの「計測を開始」をお使いください。</p>
+  </div>
+
+  <div class="faq-item">
     <p class="faq-q"><span class="badge">Q.</span>計測中にApple Watchの電池の減りが早い気がします。</p>
     <p class="faq-a">仕様上の動作です。心拍数をリアルタイムに取得するためにワークアウトセッションを使用しており、通常の待機時と比べて電池消費が大きくなります。計測を使わないときは「計測を停止」で終了することをおすすめします。</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>計測するとエクササイズリング(緑の輪)が進んでしまいます。</p>
+    <p class="faq-a">仕様上の動作です。心拍数をリアルタイムに取得するために、Apple Watchのワークアウト機能を使用しています。watchOSはワークアウトの開始を「運動の開始」とみなすため、静止していてもエクササイズの時間として記録されます。アプリ側でこれを止めることはできませんが、Apple Watch側でリングを一時停止できます(watchOS 11以降)。</p>
+    <ul class="faq-steps">
+      <li><strong>Apple Watch</strong>: アクティビティアプリ → 左上のバーアイコン → 一番下までスワイプ → 「リングを一時停止」</li>
+      <li><strong>iPhone</strong>: フィットネスアプリ → サマリー上部のアクティビティリング → 「リングを一時停止」</li>
+    </ul>
+    <p class="faq-a" style="margin-top:0.6rem;">停止期間は「今日」「今週」「今月」またはカスタム(1〜90日)から選べます。一時停止中も記録自体は継続され、連続記録(ストリーク)も途切れません。</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q"><span class="badge">Q.</span>低電力モードにすると心拍数の計測は止まりますか?</p>
+    <p class="faq-a">止まりません。Appleの説明によれば、ワークアウト中の低電力モードでオフになるのは「常時表示」やバックグラウンドでの測定・通知であり、実行中の計測そのものは継続します。画面が消えている間も測定は続いており、画面を起動すれば最新の数値を確認できます。</p>
   </div>
 
   <div class="faq-item">
